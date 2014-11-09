@@ -57,6 +57,7 @@ func TestPrint(t *testing.T) {
 	}, func(fields Fields) {
 		assert.Equal(t, fields["msg"], "test")
 		assert.Equal(t, fields["level"], "info")
+		assert.Equal(t, fields["caller"], "logrus_test.go:56")
 	})
 }
 
@@ -66,6 +67,7 @@ func TestInfo(t *testing.T) {
 	}, func(fields Fields) {
 		assert.Equal(t, fields["msg"], "test")
 		assert.Equal(t, fields["level"], "info")
+		assert.Equal(t, fields["caller"], "logrus_test.go:66")
 	})
 }
 
